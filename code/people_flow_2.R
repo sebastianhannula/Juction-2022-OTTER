@@ -1,4 +1,4 @@
-df <- read.csv("people_flow.csv", sep=",")
+df <- read.csv("annual_people_flow_nov.csv", sep=",")
 df <- df[-c(1)]
 
 df_series <- ts(df, start = 1, frequency = 24)
@@ -29,4 +29,4 @@ clyla = ts(clyla, start = c(35,1), frequency = 24)
 clala = ts(clala, start = c(35,1), frequency = 24)
 ts.plot(ennuste, col = c("blue"))
 
-write.csv(ennuste, "people_flow_pred.csv")
+write.csv(ennuste, "people_flow_pred_nov.csv")
